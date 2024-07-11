@@ -87,7 +87,6 @@ const PropertyDetails = () => {
     const validationErrors = handleValidation();
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
-      alert(Object.values(validationErrors).join("\n"));
       return;
     }
     setErrors({});
