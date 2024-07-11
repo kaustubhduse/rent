@@ -1,6 +1,6 @@
 .whole-form{
     width: 608px;
-    height: auto;
+    min-height: 15rem;
     gap: 0px;
     border-radius: 16px;
     border: 1px 1px 1px 1px;
