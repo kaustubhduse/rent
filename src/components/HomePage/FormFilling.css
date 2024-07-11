@@ -1,21 +1,19 @@
-/* .whole-form{
+.whole-form{
+    width: 608px;
+    height: auto;
     border-radius: 16px;
     border: 1px 1px 1px 1px;
-    opacity: 0px;
     background-color: #FFFFFF;
-} */
+}
 
 
-/* .form{
-    height: 276px;
-    width: 608px;
-    gap: 0px;
-    border: 1px 1px 1px 1px;
-    opacity: 0px;
+.form{
+    
+    border: 1px;
     background-color: #FFFFFF;
     overflow: scroll;
     overflow-x: hidden;
-} */
+}
 
 
 
