@@ -1,7 +1,4 @@
 /* .whole-form{
-    width: 608px;
-    height: auto;
-    gap: 0px;
     border-radius: 16px;
     border: 1px 1px 1px 1px;
     opacity: 0px;
@@ -9,7 +6,8 @@
 } */
 
 
-.form{
+/* .form{
+    height: 276px;
     width: 608px;
     gap: 0px;
     border: 1px 1px 1px 1px;
@@ -17,7 +15,7 @@
     background-color: #FFFFFF;
     overflow: scroll;
     overflow-x: hidden;
-}
+} */
 
 
 
