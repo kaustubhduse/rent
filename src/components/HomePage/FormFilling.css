@@ -10,7 +10,11 @@
 
 
 .form{
-    
+    width: 608px;
+    gap: 0px;
+    border: 1px 1px 1px 1px;
+    opacity: 0px;
+    background-color: #FFFFFF;
     overflow: scroll;
     overflow-x: hidden;
 }
