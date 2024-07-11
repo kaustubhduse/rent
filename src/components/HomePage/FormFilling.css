@@ -1,4 +1,4 @@
-.whole-form{
+/* .whole-form{
     width: 608px;
     height: auto;
     gap: 0px;
@@ -6,19 +6,14 @@
     border: 1px 1px 1px 1px;
     opacity: 0px;
     background-color: #FFFFFF;
-}
+} */
 
 
-/* .form{
-    height: 276px;
-    width: 608px;
-    gap: 0px;
-    border: 1px 1px 1px 1px;
-    opacity: 0px;
-    background-color: #FFFFFF;
+.form{
+    
     overflow: scroll;
     overflow-x: hidden;
-} */
+}
 
 
 
