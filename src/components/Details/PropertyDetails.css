@@ -1,0 +1,152 @@
+    .property-for{
+    display: flex; 
+    align-items: center;
+    width: 518px;
+    height: 64px;
+    }
+
+    .property-for-1{
+        margin-top: 3.5rem;
+        display: flex; 
+        align-items: center;
+        width: 518px;
+        height: 64px;
+    }
+
+    .property-for p, .property-for-1 p, .square-area p{
+        font-family: 'Inter', sans-serif;
+        font-size: 17px;
+        font-weight: 510;
+        line-height: 22px;
+        text-align: left;
+        margin: 0;
+    }
+
+    .imp {
+        width: 7px;
+        height: 7px;
+        font-family: 'Inter', sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 22px;
+        text-align: right;
+        margin-right: 5px; /* Adjust as needed */
+        margin-bottom: 10px;
+        transform: translateY(-2px); /* Adjust vertical positioning */
+    }
+
+
+
+    .radio-group {
+        display: flex;
+        align-items: center;
+        margin-top: -12px;
+        margin-left: 0.3rem;
+    }
+
+    .radio-option {
+        display: flex;
+        align-items: center;
+        margin-right: 10.8rem; /* Space between radio buttons */
+    }
+
+    .radio-option-1 {
+        display: flex;
+        align-items: center;
+        margin-right: 8rem; /* Space between radio buttons */
+    }
+
+    .radio-option input, .radio-option-1 input{
+        width: 20px;
+        height: 20px;
+        margin-right: 20px; /* Space between radio button and label */
+        
+    }
+
+    .residential-box {
+        display: grid;
+        grid-template-columns: repeat(3, auto); /* Display 3 items per row */
+        gap: 16px; /* Space between the cards */
+        margin-top: 2rem;
+        justify-content: start; /* Align items to the start */
+    }
+
+
+    .residential-box p{
+        font-family: Inter;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16.94px;
+        text-align: left;
+    }
+
+    .square{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        margin-top: 1.5rem
+    }
+
+    .square-area{
+        display: flex;
+        flex-direction: column;
+        margin-top: 4rem;
+        width: 100%;
+        gap: 4px
+    }
+
+    .square-area input{
+        display: flex;
+        align-items: center;
+        width: 80%;
+        height: 1.8rem;
+    }
+
+    .floor-1{
+        display: flex;
+        align-items: center;
+        width: 10.625rem;
+        height: 1.8rem;
+    }
+
+    .floor-2{
+        display: flex;
+        align-items: center;
+        width: 10.625rem;
+        height: 1.8rem;
+    }
+
+    .floor-3{
+        display: flex;
+        align-items: center;
+        width: 23.75rem;
+        height: 2.2rem;
+        margin-bottom: 0.12rem;
+    }
+
+    .property-options{
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 2.3rem; /* Space between the cards */
+        justify-content: start;
+        margin-top: -12px;
+        margin-left: 0.3rem;   
+    }
+
+    .property-description{
+        width: 90%;
+        height: auto;
+        padding: 16px 12px 16px 12px;
+        border-radius: 2px;
+        gap: 4px;
+        border: 1px 0px 0px 0px;
+        margin-top: 0.5rem;
+        font-family: 'Inter', sans-serif; /* Ensure consistent font style */
+        font-size: 14px;
+    }
+
+  
+
+    .leave-margin{
+        margin-top: 4rem;
+    }

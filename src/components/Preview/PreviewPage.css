@@ -1,0 +1,103 @@
+.page {
+    padding: 20px;
+    margin-left: 7rem;
+    margin-top: 3rem;
+  }
+  
+  .page-style{
+    margin-left: 3rem;
+    overflow: auto;
+    width: 80%;
+  }
+
+  .overview {
+    font-family: Merriweather Sans;
+font-size: 32px;
+font-weight: 400;
+line-height: 40.22px;
+text-align: left;
+    margin-bottom: 20px;
+  }
+  
+  .property-details {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 3.5rem;
+  }
+  
+  .property-item {
+    display: flex;
+    align-items: center;
+    width: 30%; /* Adjust this to control the number of items per row */
+    margin-bottom: 3.5rem;
+  }
+  
+  .property-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+  
+  .property-text {
+    display: flex;
+    flex-direction: column; /* Stack label and value vertically */
+  }
+  
+  .property-label {
+    margin: 0;
+    margin-top: 0.2rem;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 16.94px;
+    text-align: left;
+    color: rgba(122, 122, 122, 1);
+
+  }
+  
+  .property-value {
+    margin: 0;
+    margin-top: 1.2rem; /* Optional: add some space between label and value */
+    font-family: Inter;
+   font-size: 16px;
+   font-weight: 500;
+   line-height: 19.36px;
+   text-align: left;
+   color: rgba(18, 43, 73, 1);
+
+  }
+
+  .amenities-title{
+    font-family: Merriweather Sans;
+   font-size: 32px;
+   font-weight: 400;
+   line-height: 40.22px;
+   text-align: left;
+   margin-top: 6rem;
+  }
+
+  .description-title{
+    font-family: Merriweather Sans;
+font-size: 32px;
+font-weight: 400;
+line-height: 40.22px;
+text-align: left;
+margin-top: 7rem;
+  }
+
+  .desc-desc{
+    font-family: Inter;
+   font-size: 16px;
+   font-weight: 400;
+   line-height: 19.36px;
+   text-align: left;
+   margin-bottom: 5rem;
+   width: 80%;
+  }
+  
+  @media (max-width: 768px) {
+    .property-item {
+      width: 100%; /* Stack items on smaller screens */
+    }
+  }
+  

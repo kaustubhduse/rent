@@ -1,0 +1,70 @@
+.confirm-page{
+    margin-left: 8rem;
+    margin-top: 5rem;
+}
+
+.first-c{
+    font-family: Inter;
+font-size: 24px;
+font-weight: 400;
+line-height: 22px;
+text-align: left;
+color: rgba(0, 0, 0, 0.85);
+
+}
+
+.second-c{
+    font-family: Inter;
+font-size: 18px;
+font-weight: 400;
+line-height: 38px;
+text-align: left;
+color: rgba(0, 0, 0, 0.85);
+}
+
+.third-c{
+    font-family: Inter;
+font-size: 18px;
+font-weight: 400;
+line-height: 38px;
+text-align: left;
+color: rgba(0, 0, 0, 0.85);
+}
+
+.fourth-c{
+    font-family: Jacques Francois;
+font-size: 16px;
+font-weight: 400;
+line-height: 21.1px;
+text-align: left;
+color: rgba(18, 43, 73, 1);
+margin-top: 6rem;
+}
+
+.all-buttons{
+    margin-top: 6rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.button {
+    width: 13rem;
+    height: 2.5rem;
+    padding: 12px 32px;
+    gap: 10px;
+    border-radius: 8px;
+    background: linear-gradient(0deg, #122B49, #122B49),
+                linear-gradient(0deg, rgba(79, 79, 79, 0.2), rgba(79, 79, 79, 0.2));
+    color: white;
+    text-align: center;
+    border: none; /* Remove default button border */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.button:hover {
+    background: linear-gradient(0deg, #0a1f33, #0a1f33),
+                linear-gradient(0deg, rgba(79, 79, 79, 0.4), rgba(79, 79, 79, 0.4)); /* Change background color on hover */
+    color: #ffffff; /* Change text color on hover */
+}

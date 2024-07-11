@@ -1,0 +1,78 @@
+/* ModalPage.css */
+
+.modal-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    text-align: center; /* Align text center */
+    padding: 2rem; /* Add padding for spacing */
+}
+
+.imp {
+    width: 7px;
+    height: 7px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: right;
+    margin-right: 5px; /* Adjust as needed */
+    margin-bottom: 10px;
+    transform: translateY(-2px); /* Adjust vertical positioning */
+}
+
+.modal-page p {
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+    text-align: left;
+}
+
+.button {
+    width: 24rem;
+    height: 2.5rem;
+    padding: 12px 32px;
+    gap: 10px;
+    border-radius: 4px;
+    background: linear-gradient(0deg, #122B49, #122B49),
+                linear-gradient(0deg, rgba(79, 79, 79, 0.2), rgba(79, 79, 79, 0.2));
+    color: white;
+    text-align: center;
+    border: none; /* Remove default button border */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.button:hover {
+    background: linear-gradient(0deg, #0a1f33, #0a1f33),
+                linear-gradient(0deg, rgba(79, 79, 79, 0.4), rgba(79, 79, 79, 0.4)); /* Change background color on hover */
+    color: #ffffff; /* Change text color on hover */
+}
+
+.content {
+    margin-top: 0.2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.p1 {
+    font-family: Merriweather Sans;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: center;
+}
+
+.p2 {
+    margin-left: 0.5rem;
+    font-family: Merriweather Sans;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 22px;
+    text-align: center;
+    text-decoration: underline;
+}

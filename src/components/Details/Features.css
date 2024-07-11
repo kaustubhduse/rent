@@ -1,0 +1,66 @@
+.headline p {
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 21.78px;
+    text-align: left;
+    color: rgba(0, 0, 0, 1);
+}
+
+.identity {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.identity p {
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 21.78px;
+    text-align: left;
+    color: rgba(0, 0, 0, 1);
+}
+
+.radio-group {
+    display: flex;
+    width: 100%; /* Ensure it takes full width */
+    margin-top: 0.5rem; /* Adjust as needed */
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    width: 23%;
+}
+
+.radio-option input {
+    width: 20px;
+    height: 20px;
+    margin-right: 2rem; /* Adjust space between radio button and label */
+}
+
+.radio-option label {
+    font-family: Inter; /* Example font */
+    font-size: 16px; /* Example size */
+    font-weight: 400; /* Example weight */
+    line-height: 1.5; /* Example line height */
+    color: #333; /* Example color */
+    margin-right: 0.5rem; /* Optional margin between radio button and label */
+    flex: 1; /* Allow label to expand as needed */
+    white-space: nowrap; /* Prevent label from wrapping */
+    overflow: hidden; /* Hide overflow if label exceeds space */
+    text-overflow: ellipsis; /* Show ellipsis if label exceeds space */
+}
+
+.line{
+   width: 820px;
+   height: 0px;
+   border: 1px;
+   border: 1px solid rgba(214, 214, 214, 1);
+   margin-top: 2rem;
+}
+
+.bottom{
+    margin-top: 3rem;
+}

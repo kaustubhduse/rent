@@ -1,0 +1,94 @@
+.homepage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #122B49;
+    height: 90vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.description {
+    margin-right: 28rem;
+    color: white;
+    width: 40%;
+}
+
+
+.big{
+   font-family: Merriweather Sans;
+   font-size: 32px; 
+   font-weight: 400;
+   line-height: 40.22px;
+   text-align: left;
+   margin-bottom: 8px;
+}
+
+.small{
+    margin-top: 8px;
+    font-family: Merriweather Sans;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 20.11px;
+        text-align: left;
+
+}
+
+.form-back{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 1068px;
+    margin-top: 42px;
+    margin-left: 186px;
+}
+  
+.steps{
+   width: 364px;
+   height: 345px;
+   padding: 24px 0px 24px 0px;
+   gap: 24px;
+}
+
+.steps-title{
+    font-family: Merriweather Sans;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 25.14px;
+    text-align: left;
+    color: #FFFFFF;
+    margin-bottom: 2rem;
+}
+
+.step-details{
+    display: flex;
+    flex-direction: column;
+    width: 307px ;
+    height: 253px;
+}
+
+
+
+.each-step{
+    display: flex;
+    align-items: center;
+    width: 307px;
+    height: 39px;
+}
+
+.each-step .tick{
+    width: 46px;
+    height: 39px;
+}
+
+.step-text{
+    font-family: Merriweather Sans;
+   font-size: 14px;
+   font-weight: 400;
+   line-height: 17.6px;
+   text-align: left;
+   color: #FFFFFF;
+
+}
+
