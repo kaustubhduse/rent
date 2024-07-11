@@ -6,6 +6,7 @@
     border: 1px 1px 1px 1px;
     opacity: 0px;
     background-color: #FFFFFF;
+    overflow: auto;
 }
 
 
