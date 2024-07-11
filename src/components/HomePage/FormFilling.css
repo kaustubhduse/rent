@@ -1,6 +1,7 @@
 .whole-form{
     width: 608px;
     height: auto;
+    gap: 0px;
     border-radius: 16px;
     border: 1px 1px 1px 1px;
     background-color: #FFFFFF;
@@ -8,7 +9,7 @@
 
 
 .form{
-    
+    height: 276px;
     border: 1px;
     background-color: #FFFFFF;
     overflow: scroll;
