@@ -67,6 +67,7 @@ const HomePageForm = () => {
     if (Object.keys(formErrors).length > 0) {
       setErrors(formErrors);
       alert(Object.values(formErrors).join("\n"));
+      return;
     }
 
     console.log(formState);
