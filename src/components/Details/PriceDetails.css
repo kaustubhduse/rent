@@ -45,3 +45,23 @@
     margin-left: 4rem;
 }
 
+
+@media (max-width: 600px) {
+    .square-area input, .square-area select {
+        width: 100%; /* Make input and select full width on smaller screens */
+    }
+}
+
+@media (max-width: 400px) {
+    .square-area {
+        gap: 2px; /* Adjust gap between items for smaller screens */
+    }
+
+    .leave-margin {
+        margin-top: 2rem; /* Adjust margin for smaller screens */
+    }
+
+    .error-extra {
+        margin-left: 2rem; /* Adjust margin for smaller screens */
+    }
+}

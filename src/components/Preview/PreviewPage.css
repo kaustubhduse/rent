@@ -143,3 +143,61 @@ text-align: left;
     }
   }
   
+
+  @media (max-width: 1200px) {
+    .page-style {
+        width: 90%; /* Adjust width on medium-sized screens */
+    }
+}
+
+@media (max-width: 992px) {
+    .page {
+        margin-left: 3rem; /* Adjust margin on smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .page {
+        margin-left: 2rem; /* Further reduce margin on small screens */
+    }
+
+    .property-item {
+        width: 100%; /* Stack items on smaller screens */
+    }
+
+    .image-section,
+    .property-image {
+        width: 100%; /* Make images full width on smaller screens */
+        height: auto; /* Maintain aspect ratio */
+        max-width: 100%;
+    }
+
+    .overview,
+    .amenities-title,
+    .description-title,
+    .location-title {
+        font-size: 24px; /* Decrease font size for headings on smaller screens */
+        line-height: 32px; /* Adjust line height */
+        margin-top: 4rem; /* Increase top margin for headings */
+        margin-bottom: 1.5rem; /* Adjust bottom margin for headings */
+    }
+
+    .desc-desc {
+        width: 100%; /* Full width for description on smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .overview,
+    .amenities-title,
+    .description-title,
+    .location-title {
+        font-size: 20px; /* Further reduce font size for headings on extra small screens */
+        line-height: 28px; /* Adjust line height */
+    }
+
+    .desc-desc {
+        font-size: 14px; /* Decrease font size for description on extra small screens */
+        line-height: 18px; /* Adjust line height */
+    }
+}

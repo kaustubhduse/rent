@@ -23,3 +23,32 @@
 .feature-item:nth-child(n + 5) {
     margin-top: 3.5rem; /* Adjust this value as needed */
 }
+
+@media (max-width: 1200px) {
+    .amenities-item {
+        width: calc(25% - 1px);
+    }
+}
+
+@media (max-width: 992px) {
+    .amenities-item {
+        width: calc(33.33% - 1px);
+    }
+}
+
+@media (max-width: 768px) {
+    .amenities-item {
+        width: calc(50% - 1px);
+    }
+}
+
+@media (max-width: 576px) {
+    .amenities-item {
+        width: calc(100% - 1px);
+        margin-left: 0;
+    }
+
+    .amenities-container {
+        margin-left: 0;
+    }
+}

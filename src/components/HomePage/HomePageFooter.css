@@ -8,6 +8,12 @@
     border-radius: 0px 0px 16px 16px;
 }
 
+@media screen and (max-width: 768px) {
+    .ending {
+        width: 100%; /* Full width on smaller screens */
+    }
+}
+
 .home-form-actions {
     display: flex;
     align-items: center;

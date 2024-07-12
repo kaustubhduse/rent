@@ -150,3 +150,39 @@
     .leave-margin{
         margin-top: 4rem;
     }
+
+
+    @media (max-width: 768px) {
+        .property-for,
+        .property-for-1 {
+            width: 100%; /* Make the width full on smaller screens */
+        }
+    
+        .radio-option,
+        .radio-option-1 {
+            margin-right: 5rem; /* Adjust margin for radio options on smaller screens */
+        }
+    
+        .residential-box {
+            grid-template-columns: repeat(2, auto); /* Display 2 items per row on smaller screens */
+        }
+    
+        .floor-3 {
+            width: 100%; /* Make the width full for floor-3 on smaller screens */
+        }
+    
+        .property-options {
+            gap: 1.5rem; /* Adjust gap between property options on smaller screens */
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .square-area input {
+            width: 100%; /* Make input full width on smaller screens */
+        }
+    
+        .floor-1,
+        .floor-2 {
+            width: 100%; /* Make width full for floor-1 and floor-2 on smaller screens */
+        }
+    }

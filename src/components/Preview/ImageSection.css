@@ -45,3 +45,30 @@ display: flex;
     background-color: antiquewhite;
 
   }
+
+
+  @media (max-width: 1200px) {
+    .all-images {
+        width: 100%;
+        max-width: 837px; /* Limit maximum width on larger screens */
+        margin-bottom: 6rem; /* Adjust margin for smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .all-images {
+        margin-bottom: 4rem; /* Further reduce margin on smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .all-images {
+        margin-bottom: 2rem; /* Adjust margin for smallest screens */
+    }
+
+    .prev-button,
+    .next-button {
+        padding: 8px; /* Decrease padding on navigation buttons */
+        font-size: 0.8rem; /* Reduce font size on navigation buttons */
+    }
+}

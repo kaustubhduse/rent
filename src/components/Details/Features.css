@@ -64,3 +64,27 @@
 .bottom{
     margin-top: 3rem;
 }
+
+
+@media (max-width: 768px) {
+    .radio-option {
+        width: 100%; /* Full width for radio options on smaller screens */
+        margin-right: 0; /* Remove right margin */
+    }
+
+    .radio-option input {
+        margin-right: 0.5rem; /* Adjust space between radio button and label */
+    }
+}
+
+@media (max-width: 576px) {
+    .headline p,
+    .identity p {
+        font-size: 16px; /* Decrease font size for smaller screens */
+        line-height: 20px; /* Adjust line height accordingly */
+    }
+
+    .line {
+        width: 100%;
+    }
+}

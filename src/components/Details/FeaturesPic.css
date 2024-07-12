@@ -39,3 +39,37 @@
 .feature-item:nth-child(n + 5) {
     margin-top: 3.5rem; /* Adjust this value as needed */
 }
+
+
+
+@media (max-width: 1200px) {
+    .feature-item {
+        width: calc(33.33% - 16px); /* Adjust width to fit three items in a row */
+    }
+}
+
+@media (max-width: 900px) {
+    .feature-item {
+        width: calc(50% - 16px); /* Adjust width to fit two items in a row */
+    }
+}
+
+@media (max-width: 600px) {
+    .feature-item {
+        width: 100%; /* Full width for single column on smaller screens */
+        margin-top: 2rem; /* Adjust margin-top for better spacing */
+    }
+
+    .feature-item:nth-child(n + 5) {
+        margin-top: 2rem; /* Adjust margin-top for better spacing */
+    }
+
+    .feature-img {
+        width: 100px; /* Adjust image size for smaller screens */
+        height: 72px; /* Adjust image size for smaller screens */
+    }
+
+    .feature-checkbox {
+        margin-top: 4px; /* Adjust space between image and checkbox for smaller screens */
+    }
+}

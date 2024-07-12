@@ -1,20 +1,30 @@
-    .small-card {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        white-space: nowrap; /* Prevent content from wrapping to the next line */
-        min-width: 4rem;
-        padding: 0px 20px; /* Adjusted padding to decrease height */
-        gap: 10px;
-        border-radius: 30px;
-        border: 1px solid #D6D6D6;
-        background-color: white;
-        cursor: pointer;
-        transition: background-color 0.3s, color 0.3s;
-        height: 2.5rem;
-    }
+.small-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    min-width: 4rem;
+    padding: 0px 20px;
+    gap: 10px;
+    border-radius: 30px;
+    border: 1px solid #D6D6D6;
+    background-color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    height: 2.5rem;
+}
 
-    .small-card.clicked {
-        background-color: hsl(0, 6%, 90%);
-        color: black; 
+.small-card.clicked {
+    background-color: hsl(0, 6%, 90%);
+    color: black;
+}
+
+@media (max-width: 600px) {
+    .small-card {
+        min-width: auto; /* Allow width to adjust as per content */
+        padding: 0px 12px; /* Decrease padding for smaller screens */
+        gap: 8px; /* Reduce gap between elements */
+        height: 2.2rem; /* Decrease height for smaller screens */
+        font-size: 12px; /* Adjust font size for smaller screens */
     }
+}

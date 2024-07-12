@@ -8,7 +8,6 @@
   }
   
   .nav {
-    height: 20%;
     margin-top: 1.5rem;
   }
   
@@ -62,4 +61,34 @@
     gap: 0px;
     opacity: 0px;
   }
+
+  @media (max-width: 1024px) {
+    .header {
+        padding: 0 2rem; /* Decrease padding for smaller screens */
+    }
+    
+    .nav li {
+        margin-left: 1.5rem; /* Adjust margin between list items for smaller screens */
+    }
+    
+    .logo {
+        width: 90px; /* Decrease logo width for smaller screens */
+        height: 40px; /* Decrease logo height for smaller screens */
+    }
+}
+
+  @media (max-width: 768px) {
+    .header {
+        padding: 0 1rem; /* Further decrease padding for even smaller screens */
+    }
+    
+    .nav ul {
+        flex-direction: column; /* Stack navigation items vertically on smaller screens */
+    }
+    
+    .nav li {
+        margin-left: 0; /* Remove margin between stacked list items */
+        margin-bottom: 1rem; /* Add space between vertically stacked list items */
+    }
+}
   

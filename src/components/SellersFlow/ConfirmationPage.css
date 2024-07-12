@@ -68,3 +68,107 @@ margin-top: 6rem;
                 linear-gradient(0deg, rgba(79, 79, 79, 0.4), rgba(79, 79, 79, 0.4)); /* Change background color on hover */
     color: #ffffff; /* Change text color on hover */
 }
+
+
+@media (max-width: 1200px) {
+    .confirm-page {
+        margin-left: 4rem;
+        margin-top: 3rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .confirm-page {
+        margin-left: 2rem;
+        margin-top: 2rem;
+    }
+    
+    .first-c {
+        font-size: 20px;
+        line-height: 28px;
+    }
+    
+    .second-c,
+    .third-c {
+        font-size: 16px;
+        line-height: 28px;
+    }
+    
+    .fourth-c {
+        font-size: 14px;
+        line-height: 18px;
+        margin-top: 4rem;
+    }
+    
+    .all-buttons {
+        margin-top: 4rem;
+    }
+    
+    .button {
+        width: 10rem;
+        height: 2.2rem;
+        padding: 10px 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .confirm-page {
+        margin-left: 1rem;
+        margin-top: 1.5rem;
+    }
+    
+    .first-c {
+        font-size: 18px;
+    }
+    
+    .second-c,
+    .third-c {
+        font-size: 14px;
+    }
+    
+    .fourth-c {
+        font-size: 12px;
+        margin-top: 3rem;
+    }
+    
+    .all-buttons {
+        margin-top: 3rem;
+    }
+    
+    .button {
+        width: 9rem;
+        height: 2rem;
+        padding: 8px 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .confirm-page {
+        margin-left: 0.5rem;
+        margin-top: 1rem;
+    }
+    
+    .first-c {
+        font-size: 16px;
+    }
+    
+    .second-c,
+    .third-c {
+        font-size: 12px;
+    }
+    
+    .fourth-c {
+        font-size: 10px;
+        margin-top: 2rem;
+    }
+    
+    .all-buttons {
+        margin-top: 2rem;
+    }
+    
+    .button {
+        width: 8rem;
+        height: 1.8rem;
+        padding: 6px 16px;
+    }
+}

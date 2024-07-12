@@ -24,3 +24,19 @@
 
 
 }
+
+@media (max-width: 600px) {
+    .square-area input {
+        width: 100%; /* Make input full width on smaller screens */
+    }
+}
+
+@media (max-width: 400px) {
+    .square-area {
+        gap: 2px; /* Adjust gap between items for smaller screens */
+    }
+
+    .square-area input {
+        padding: 5px; /* Adjust padding for smaller screens */
+    }
+}

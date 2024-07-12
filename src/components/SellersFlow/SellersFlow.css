@@ -98,3 +98,58 @@
 
 
 
+@media (max-width: 1200px) {
+    .seller-box,
+    .index-box,
+    .upper-box,
+    .small-box,
+    .box-highlighted,
+    .normal-box,
+    .full-box,
+    .content-box {
+        width: 90%; /* Adjust width for smaller screens */
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 992px) {
+    .seller-box {
+        height: auto; /* Allow height to adjust based on content */
+        padding: 20px; /* Adjust padding for smaller screens */
+    }
+    
+    .content-box {
+        width: 100%; /* Full width for smaller screens */
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .seller-box {
+        width: 100%; /* Full width for smaller screens */
+        padding: 10px; /* Further adjust padding for smaller screens */
+    }
+    
+    .content-box {
+        gap: 20px; /* Reduce gap between elements */
+    }
+    
+    .box-highlighted,
+    .normal-box {
+        width: 100%; /* Full width for smaller screens */
+        margin-top: 1rem; /* Adjust margin for smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .seller-box {
+        margin-top: 80px; /* Adjust margin for smaller screens */
+    }
+    
+    .index-box,
+    .upper-box,
+    .small-box {
+        width: 100%; /* Full width for smaller screens */
+    }
+}

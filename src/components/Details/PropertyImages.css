@@ -60,3 +60,48 @@ margin-top: 2rem;
 .add-photos-text p{
     text-align: center;
 }
+
+
+@media (max-width: 768px) {
+    .first-line {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .second-line {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .add-photos {
+        height: 150px;
+    }
+
+    .add-photos-text {
+        width: 30%;
+        font-size: 0.8rem;
+        height: 2.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .first-line {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .second-line {
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    .add-photos {
+        height: 120px;
+    }
+
+    .add-photos-text {
+        width: 40%;
+        font-size: 0.7rem;
+        height: 2.5rem;
+    }
+}

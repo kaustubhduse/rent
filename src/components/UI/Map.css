@@ -1,52 +1,51 @@
 .map-wrap {
-    position: relative;
-    width: 100%;
-    height: calc(100vh - 77px); /* calculate height of the screen minus the heading */
-    margin-top: 2.5rem;
-    margin-bottom: 2rem;
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 77px); /* calculate height of the screen minus the heading */
+  margin-top: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.map {
+  width: 100%;
+  height: 100%;
+}
+
+.searchbar {
+  position: absolute;
+  top: 10px; /* Adjust the top position as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 250px;
+  z-index: 10; /* Ensure the searchbar is on top of the map */
+}
+
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  .searchbar {
+      transform: translateX(-50%) scale(1.4); /* Scale and center horizontally */
   }
-  
-  .map {
+}
 
-    width: 100%;
-    height: 100%;
+@media screen and (min-width: 1024px) and (max-width: 1400px) {
+  .searchbar {
+      transform: translateX(-50%) scale(1.4); /* Scale and center horizontally */
   }
-  
-
-  .searchbar{
-    position: absolute;
-    top: 10px; /* Adjust the top position as needed */
-    left: 50%;
-    transform: translateX(-50%);
-    width: 250px;
-    z-index: 10; /* Ensure the searchbar is on top of the map */
- }
-
-@media ((min-width:600px) and (max-width: 1024px)){
-  .searchbar{
-    scale: 1.4;
-  }    
 }
 
-@media ((min-width: 1024px) and (max-width: 1400px)){
-  .searchbar{
-    scale: 1.4;
-  }   
-}
-    
-@media ((min-width: 450px) and (max-width: 600px)){
-  .searchbar{
-    scale: 1.2;
-  } 
+@media screen and (min-width: 450px) and (max-width: 600px) {
+  .searchbar {
+      transform: translateX(-50%) scale(1.2); /* Scale and center horizontally */
+  }
 }
 
-@media (max-width:450px) {
-  .searchbar{
-    scale: 1.1;
-  } 
-}   
-@media (max-width:324px) {
-  .searchbar{
-    scale: .9;
-  } 
-}   
+@media screen and (max-width: 450px) {
+  .searchbar {
+      transform: translateX(-50%) scale(1.1); /* Scale and center horizontally */
+  }
+}
+
+@media screen and (max-width: 324px) {
+  .searchbar {
+      transform: translateX(-50%) scale(0.9); /* Scale and center horizontally */
+  }
+}

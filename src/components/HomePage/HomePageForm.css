@@ -4,3 +4,18 @@
     align-items: center;
 }
 
+/* Example of making .container responsive */
+
+@media screen and (max-width: 768px) {
+    .container {
+        /* Example adjustments for smaller screens */
+        padding: 0 1rem; /* Add padding for spacing */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        /* Further adjustments for very small screens */
+        padding: 0 0.5rem; /* Adjust padding further */
+    }
+}

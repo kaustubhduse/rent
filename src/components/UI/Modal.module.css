@@ -1,40 +1,40 @@
 .backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    z-index: 20;
-    background-color: rgba(0, 0, 0, 0.75);
-  }
-  
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 20;
+  background-color: rgba(0, 0, 0, 0.75); /* Semi-transparent black background */
+}
+
+.modal {
+  position: fixed;
+  top: 20vh; /* 20% from the top of the viewport */
+  left: 5%; /* 5% from the left of the viewport */
+  width: 90%; /* Takes up 90% of the viewport width */
+  background-color: white; /* White background for the modal */
+  padding: 1rem; /* Padding inside the modal */
+  border-radius: 14px; /* Rounded corners */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25); /* Box shadow for depth */
+  z-index: 30; /* Ensure the modal is on top of the backdrop */
+  animation: slide-down 300ms ease-out forwards; /* Slide down animation */
+}
+
+@media (min-width: 768px) {
   .modal {
-    position: fixed;
-    top: 20vh;
-    left: 5%;
-    width: 90%;
-    background-color: white;
-    padding: 1rem;
-    border-radius: 14px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
-    z-index: 30;
-    animation: slide-down 300ms ease-out forwards;
+      width: 40rem; /* Fixed width for larger screens */
+      left: calc(50% - 20rem); /* Center the modal horizontally */
   }
-  
-  @media (min-width: 768px) {
-    .modal {
-      width: 40rem;
-      left: calc(50% - 20rem);
-    }
-  }
-  
-  @keyframes slide-down {
-    from {
+}
+
+@keyframes slide-down {
+  from {
       opacity: 0;
-      transform: translateY(-3rem);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+      transform: translateY(-3rem); /* Start above and slide down */
   }
+  to {
+      opacity: 1;
+      transform: translateY(0); /* Slide down to its final position */
+  }
+}

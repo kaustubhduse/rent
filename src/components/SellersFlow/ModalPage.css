@@ -76,3 +76,38 @@
     text-align: center;
     text-decoration: underline;
 }
+
+
+@media (max-width: 768px) {
+    .modal-page {
+        padding: 1rem; /* Adjust padding for smaller screens */
+    }
+    
+    .button {
+        width: 18rem; /* Adjust button width for smaller screens */
+        padding: 10px 24px; /* Adjust button padding for smaller screens */
+    }
+    
+    .p1,
+    .p2 {
+        font-size: 10px; /* Decrease font size for smaller screens */
+        line-height: 18px; /* Adjust line height for smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .modal-page {
+        padding: 0.5rem; /* Further reduce padding for extra small screens */
+    }
+    
+    .button {
+        width: 14rem; /* Further adjust button width for extra small screens */
+        padding: 8px 20px; /* Further adjust button padding for extra small screens */
+    }
+    
+    .p1,
+    .p2 {
+        font-size: 8px; /* Decrease font size for extra small screens */
+        line-height: 16px; /* Adjust line height for extra small screens */
+    }
+}
