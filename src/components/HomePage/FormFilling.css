@@ -155,3 +155,76 @@
     border-radius: 8px;
 }
 
+
+
+@media (max-width: 1200px) {
+    .whole-form {
+        width: 90%; /* Adjust width on medium-sized screens */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .information {
+        width: 90%; /* Adjust width on medium-sized screens */
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 992px) {
+    .whole-form {
+        width: 90%; /* Adjust width on smaller screens */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .information {
+        width: 90%; /* Adjust width on smaller screens */
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .whole-form {
+        width: 90%; /* Adjust width on small screens */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .information {
+        width: 90%; /* Adjust width on small screens */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .name {
+        margin-top: 2rem; /* Adjust margin top for smaller screens */
+    }
+
+    .name-marg {
+        margin-top: 0.5rem; /* Adjust margin top for smaller screens */
+    }
+
+    .radio-option {
+        margin-right: 8rem; /* Adjust space between radio buttons for smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .whole-form {
+        width: 90%; /* Adjust width on extra small screens */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .information {
+        width: 90%; /* Adjust width on extra small screens */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .radio-option {
+        margin-right: 5rem; /* Further adjust space between radio buttons for extra small screens */
+    }
+}
