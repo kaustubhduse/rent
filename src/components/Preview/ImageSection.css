@@ -1,6 +1,7 @@
 .all-images{
     /* width: 837px;
 height: 405px; */
+width: fit-content;
 position: relative;
 display: flex;
   justify-content: center;
