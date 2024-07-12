@@ -3,9 +3,9 @@ import React, { createContext, useState } from 'react';
 const AppContext = createContext();
 
 export const AppContextProvider = (props) => {
-    const [bedrooms, setBedrooms] = useState(0);
-    const [bathrooms, setBathrooms] = useState(0);
-    const [sqft, setSqft] = useState(0);
+    const [bedrooms, setBedrooms] = useState('');
+    const [bathrooms, setBathrooms] = useState('');
+    const [sqft, setSqft] = useState('');
     const [propertyOnFloor, setPropertyOnFloor] = useState('');
     const [totalFloors, setTotalFloors] = useState('');
     const [facing, setFacing] = useState('');

@@ -187,13 +187,14 @@
 
 @media (max-width: 768px) {
     .whole-form {
-        width: 90%; /* Adjust width on small screens */
-        margin-left: auto;
-        margin-right: auto;
+        width: 100%;
+    }
+    .form{
+        margin-left: 0;
     }
 
     .information {
-        width: 90%; /* Adjust width on small screens */
+        width: 100%; /* Adjust width on small screens */
         margin-left: auto;
         margin-right: auto;
     }

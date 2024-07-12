@@ -297,24 +297,29 @@ const PropertyDetails = () => {
           </div>
         )}
         {iscommercial && (
-          <div className="commercial-box">
+          <div className="residential-box">
             <SmallCard onClick={() => propertyTypeHandler("Office Space")}>
               Office Space
+            </SmallCard>
+            <SmallCard onClick={() => propertyTypeHandler("Co Working")}>
+              Co Working
+            </SmallCard>
+            <SmallCard onClick={() => propertyTypeHandler("Restaurant /Cafe")}>
+              Restaurant /Cafe
             </SmallCard>
             <SmallCard onClick={() => propertyTypeHandler("Shop / Showroom")}>
               Shop / Showroom
             </SmallCard>
-            <SmallCard onClick={() => propertyTypeHandler("Factory")}>
-              Factory
-            </SmallCard>
-            <SmallCard onClick={() => propertyTypeHandler("Warehouse")}>
-              Warehouse
-            </SmallCard>
-            <SmallCard
-              onClick={() => propertyTypeHandler("Industrial Building")}
-            >
+            <SmallCard onClick={() => propertyTypeHandler("Industrial Building")}>
               Industrial Building
             </SmallCard>
+            <SmallCard onClick={() => propertyTypeHandler("Industrial Building")}>
+              Industrial Shed
+            </SmallCard>
+            <SmallCard onClick={() => propertyTypeHandler("Warehouse")}>
+              Warehouse/Godown
+            </SmallCard>
+            
           </div>
         )}
 
@@ -345,7 +350,7 @@ const PropertyDetails = () => {
             <p>
               Carpet Area <img src={imp} alt="important" className="imp" />
             </p>
-            <input type="number" placeholder="0" className="text-box"  />
+            <input type="text" placeholder="0" className="text-box"  />
           </div>
         </div>
         {errors.sqft && <p className="error">{errors.sqft}</p>}
@@ -359,8 +364,6 @@ const PropertyDetails = () => {
             <input
               type="text"
               placeholder="Floor"
-              id="property-on-floor"
-              value={ctx.propertyOnFloor}
               className="floor-1"
               onChange={propertyOnFloorHandler}
             />
@@ -376,7 +379,6 @@ const PropertyDetails = () => {
             <input
               type="text"
               placeholder="Total Floor"
-              
               className="floor-2"
               onChange={totalFloorsHandler}
             />

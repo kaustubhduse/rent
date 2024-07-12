@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import AppContext from '../../store/use-context';
 import './PreviewPage.css';
 import bedroom from '../../assets/overview/bedroom.png';
@@ -25,6 +25,7 @@ import ImageSection from './ImageSection';
 
 const PreviewPage = () => {
   const ctx = useContext(AppContext);
+  const [isExpanded, setIsExpanded] = useState(false);
 
   const details = [
     { img: bedroom, label: 'Bedrooms', value: ctx.bedrooms },
@@ -36,7 +37,7 @@ const PreviewPage = () => {
     { img: balcony, label: 'Balcony', value: ctx.balcony },
     { img: furnishing, label: 'Furnishing', value: ctx.furnishing },
     { img: tenantpreference, label: 'Tenant Preference', value: ctx.tenantPreference },
-    { img: flooring, label: 'Flooring', value: ctx.flooring },
+    { img: flooring, label: 'Flooring', value: ctx.tiles },
     { img: availability, label: 'Availability', value: ctx.availability },
     { img: watersupply, label: 'Water Supply', value: ctx.waterSupply },
     { img: petsallowed, label: 'Pets Allowed', value: ctx.petsAllowed },
@@ -47,7 +48,9 @@ const PreviewPage = () => {
     { img: gatedsecurity, label: 'Gated Security', value: ctx.gatedSecurity },
   ];
 
-  console.log(ctx.searchedLocation, ctx.searchedName);
+  const toggleExpanded = () => {
+    setIsExpanded(!isExpanded);
+  };
 
   return (
     <div className='page'>
@@ -84,8 +87,13 @@ const PreviewPage = () => {
 
       <div className='line'></div>
 
-       <p className='description-title'>Description</p>
-        <p className='desc-desc'>{ctx.description}</p>
+      <p className='description-title'>Description</p>
+      <div className={`desc-desc ${isExpanded ? 'expanded' : 'collapsed'}`}>{ctx.description}</div>
+      {ctx.description.length > 500 && ( // Arbitrary length to decide when to show the toggle
+        <button className='toggle-button' onClick={toggleExpanded}>
+          {isExpanded ? 'Show less' : 'Show more'}
+        </button>
+      )}
 
       <div className='line'></div>
       </div>

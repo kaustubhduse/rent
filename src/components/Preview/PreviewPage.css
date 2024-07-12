@@ -136,6 +136,34 @@ text-align: left;
     gap: 0px;
     border: 1px;
   }
+
+  .desc-desc {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  .desc-desc.collapsed {
+    -webkit-line-clamp: 10;
+    line-clamp: 10;
+    max-height: 10em; /* Adjust as needed for line height */
+  }
+  
+  .desc-desc.expanded {
+    -webkit-line-clamp: unset;
+    line-clamp: unset;
+    max-height: unset;
+  }
+  
+  .toggle-button {
+    background: none;
+    border: none;
+    color: blue;
+    cursor: pointer;
+    text-decoration: underline;
+    margin-top: 1rem;
+  }
+  
   
   @media (max-width: 768px) {
     .property-item {
