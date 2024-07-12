@@ -34,6 +34,7 @@ export const AppContextProvider = (props) => {
     const[landmark,setLandmark] = useState('');
     const [city,setCity] = useState('');
     const [propertyImages, setPropertyImages] = useState([]);    
+    const [reviews,setReviews] = useState({});
 
     const contextValue = {
         bedrooms,setBedrooms,
@@ -67,6 +68,7 @@ export const AppContextProvider = (props) => {
         landmark,setLandmark,
         city,setCity,
         propertyImages, setPropertyImages,
+        reviews,setReviews
     };
 
     return (

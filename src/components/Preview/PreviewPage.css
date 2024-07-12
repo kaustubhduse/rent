@@ -137,19 +137,19 @@ text-align: left;
     border: 1px;
   }
 
-  .desc-desc {
+  .desc-desc, .about-text {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
   
-  .desc-desc.collapsed {
+  .desc-desc.collapsed, .about-text.collapsed {
     -webkit-line-clamp: 10;
     line-clamp: 10;
     max-height: 10em; /* Adjust as needed for line height */
   }
   
-  .desc-desc.expanded {
+  .desc-desc.expanded, .about-text.expanded  {
     -webkit-line-clamp: unset;
     line-clamp: unset;
     max-height: unset;
@@ -163,6 +163,141 @@ text-align: left;
     text-decoration: underline;
     margin-top: 1rem;
   }
+
+  .about-title{
+    font-family: Merriweather Sans;
+font-size: 32px;
+font-weight: 400;
+line-height: 40.22px;
+text-align: left;
+
+  }
+
+  .mira-road{
+    margin-top: 5rem;
+    padding: 40px 36px 40px 36px;
+    gap: 60px;
+    border-radius: 4px 0px 0px 0px;
+    border: 0.8px;
+    background: rgba(255, 255, 255, 1);
+    border: 0.8px solid rgba(214, 214, 214, 1)
+  }
+
+  .write-review{
+    margin-top: 3rem;
+    width: 20%;
+    height: 36px;
+    padding: 12px 32px 12px 32px;
+    gap: 10px;
+   border-radius: 4px ;
+   background: linear-gradient(0deg, #122B49, #122B49),
+   linear-gradient(0deg, rgba(79, 79, 79, 0.2), rgba(79, 79, 79, 0.2));
+   color: white;
+   border: none;
+   cursor: pointer;
+   text-align: center;
+
+  }
+
+  .review-box{
+    margin-top: 5rem;
+    height: 458px;
+   padding: 40px 36px 40px 36px;
+   gap: 60px;
+   border-radius: 4px ;
+   border: 0.8px;
+   background: rgba(255, 255, 255, 1);
+   border: 0.8px solid rgba(214, 214, 214, 1)
+  }
+
+  .ratings-title{
+    font-family: Merriweather Sans;
+    font-size: 32px;
+   font-weight: 400;
+   line-height: 40.22px;
+   text-align: left;
+   color: rgba(0, 0, 0, 1);
+
+
+  }
+
+  .ratings{
+   height: 182px;
+   gap: 166px;
+   display: flex;
+   gap: 2rem;
+
+  }
+
+  .profile-right {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .review-number{
+    width: 511px;
+   height: 145px;
+   gap: 20px;
+   flex: 1;
+  }
+
+  .profile{
+    width: 40px;
+height: 40px;
+padding: 8px;
+gap: 10px;
+border-radius: 29px ;
+
+  }
+
+  .review-name{
+    margin-top: -3rem;
+    margin-left: 4rem;
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 19.36px;
+    text-align: left;
+    color: rgba(18, 43, 73, 1);
+
+  }
+
+  .review-period{
+    margin-left: 4rem;
+    margin-top: -1rem;
+    margin-bottom: 2rem;
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 14.52px;
+    text-align: left;
+    color: rgba(66, 66, 66, 1);
+    
+  }
+
+  .review-tilename{
+    font-family: Inter;
+font-size: 18px;
+font-weight: 600;
+line-height: 19.36px;
+text-align: left;
+color: rgba(66, 66, 66, 1);
+
+  }
+
+  .review-para{
+    font-family: Inter;
+font-size: 18px;
+font-weight: 400;
+line-height: 19.36px;
+text-align: left;
+color: rgba(66, 66, 66, 1);
+
+  }
+
+
+
+
   
   
   @media (max-width: 768px) {

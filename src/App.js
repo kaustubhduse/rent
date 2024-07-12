@@ -8,6 +8,7 @@ import PropertyImages from "./components/Details/PropertyImages";
 import ModalPage from "./components/SellersFlow/ModalPage";
 import ConfirmationPage from "./components/SellersFlow/ConfimationPage";
 import PreviewPage from "./components/Preview/PreviewPage";
+import Review from "./components/Preview/Review";
 import { AppContextProvider } from "./store/use-context";
 
 import {
@@ -69,6 +70,11 @@ function App() {
             path="/list-your-property/previewpage"
             exact
             element={<PreviewPage/>}
+          />
+          <Route
+            path="/list-your-property/previewpage/review"
+            exact
+            element={<Review/>}
           />
           
 
