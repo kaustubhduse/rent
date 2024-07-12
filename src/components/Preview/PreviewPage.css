@@ -188,6 +188,9 @@ text-align: left;
 }
 
 @media (max-width: 576px) {
+     .page{
+      margin-left: 0;
+     }
     .overview,
     .amenities-title,
     .description-title,

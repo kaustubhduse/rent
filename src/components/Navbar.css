@@ -79,7 +79,7 @@
 
   @media (max-width: 768px) {
     .header {
-        padding: 0 1rem; /* Further decrease padding for even smaller screens */
+        padding: 0 1rem;
     }
     
     .nav ul {

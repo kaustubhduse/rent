@@ -176,13 +176,49 @@
         }
     }
     
-    @media (max-width: 480px) {
-        .square-area input {
-            width: 100%; /* Make input full width on smaller screens */
+    @media (max-width: 600px) {
+        .square {
+            flex-direction: column; /* Stack .square items vertically */
         }
     
-        .floor-1,
-        .floor-2 {
-            width: 100%; /* Make width full for floor-1 and floor-2 on smaller screens */
+        .square-area {
+            width: 100%; /* Make .square-area full width */
+            gap: 2px; /* Adjust gap between items */
+        }
+    
+        .square-area input {
+            width: 100%; /* Make input full width */
+            padding: 5px; /* Adjust padding */
+        }
+    
+        .radio-group {
+            flex-direction: column; /* Stack radio options vertically */
+            align-items: flex-start; /* Align items to the start */
+            margin-left: 0; /* Remove margin-left */
+            margin-top: -12px; /* Adjust margin-top if necessary */
+        }
+    
+        .radio-option, .radio-option-1 {
+            margin-right: 0; /* Remove right margin from radio options */
+            margin-bottom: 8px; /* Add bottom margin between radio options */
+        }
+
+        .residential-box {
+            display: flex;
+            flex-wrap: wrap; /* Allow cards to wrap to the next line */
+            gap: 16px; /* Space between the cards */
+            justify-content: flex-start; /* Align items to the start */
+            margin-top: 2rem; /* Adjust top margin if needed */
+        }
+    
+        .residential-box p {
+            font-family: Inter;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 16.94px;
+            text-align: left;
         }
     }
+    
+
+   

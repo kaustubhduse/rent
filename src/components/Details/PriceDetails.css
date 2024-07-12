@@ -52,9 +52,21 @@
     }
 }
 
-@media (max-width: 400px) {
-    .square-area {
-        gap: 2px; /* Adjust gap between items for smaller screens */
+@media (max-width: 600px) {
+    @media (max-width: 600px) {
+        .square {
+            flex-direction: column; /* Stack .square items vertically */
+        }
+    
+        .square-area {
+            width: 100%; /* Make .square-area full width */
+            gap: 2px; /* Adjust gap between items */
+        }
+    
+        .square-area input {
+            width: 100%; /* Make input full width */
+            padding: 5px; /* Adjust padding */
+        }
     }
 
     .leave-margin {

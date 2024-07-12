@@ -26,5 +26,8 @@
         gap: 8px; /* Reduce gap between elements */
         height: 2.2rem; /* Decrease height for smaller screens */
         font-size: 12px; /* Adjust font size for smaller screens */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
     }
 }
