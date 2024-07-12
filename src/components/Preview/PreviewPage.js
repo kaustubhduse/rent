@@ -21,6 +21,7 @@ import propertytype from '../../assets/overview/propertytype.png';
 import gatedsecurity from '../../assets/overview/gated-security.png';
 
 import Amenities from './Amenities';
+import ImageSection from './ImageSection';
 
 const PreviewPage = () => {
   const ctx = useContext(AppContext);
@@ -46,9 +47,23 @@ const PreviewPage = () => {
     { img: gatedsecurity, label: 'Gated Security', value: ctx.gatedSecurity },
   ];
 
+  console.log(ctx.searchedLocation, ctx.searchedName);
+
   return (
     <div className='page'>
       <div className='page-style'>
+      <div className='location'>
+        <p className='location-title'>{`${ctx.bedrooms} BHK ${ctx.propertyType} for ${ctx.propertyFor} in ${ctx.buildingName} ${ctx.locality}` } <br></br>{`(${ctx.sqft} Sq.ft.)`}</p>
+        <p className='locality'>{`${ctx.buildingName} ${ctx.landmark} ${ctx.locality}`}</p>
+      </div>
+
+        <ImageSection>
+        {ctx.propertyImages.map((img, index) => (
+          <img src={img} alt='property' key={index} className='property-image' />
+        ))}
+        </ImageSection>
+      
+ 
       <p className='overview'>Property Overview</p>
       <div className='property-details'>
         {details.map((detail, index) => (

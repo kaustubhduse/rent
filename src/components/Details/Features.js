@@ -21,6 +21,24 @@ const Features = () => {
         gatedSecurity: false
     });
 
+    const [nonVegAllowed, setNonVegAllowed] = useState(ctx.nonVegAllowed);
+    const [petsAllowed, setPetsAllowed] = useState(ctx.petsAllowed);
+    const [electricityStatus, setElectricityStatus] = useState(ctx.electricityStatus);
+    const [waterSupply, setWaterSupply] = useState(ctx.waterSupply);
+    const [furnishing, setFurnishing] = useState(ctx.furnishing);
+    const [tiles, setTiles] = useState(ctx.tiles);
+    const [gatedSecurity, setGatedSecurity] = useState(ctx.gatedSecurity);
+
+    useEffect(() => {
+        setNonVegAllowed(ctx.nonVegAllowed);
+        setPetsAllowed(ctx.petsAllowed);
+        setElectricityStatus(ctx.electricityStatus);
+        setWaterSupply(ctx.waterSupply);
+        setFurnishing(ctx.furnishing);
+        setTiles(ctx.tiles);
+        setGatedSecurity(ctx.gatedSecurity);
+    }, [ctx.nonVegAllowed, ctx.petsAllowed, ctx.electricityStatus, ctx.waterSupply, ctx.furnishing, ctx.tiles, ctx.gatedSecurity]);
+
     const handleValidation = () => {
         let formIsValid = true;
         let newErrors = {
@@ -33,31 +51,31 @@ const Features = () => {
             gatedSecurity: false
         };
 
-        if (!ctx.nonVegAllowed) {
+        if (!nonVegAllowed) {
             newErrors.nonVegAllowed = true;
             formIsValid = false;
         }
-        if (!ctx.petsAllowed) {
+        if (!petsAllowed) {
             newErrors.petsAllowed = true;
             formIsValid = false;
         }
-        if (!ctx.electricityStatus) {
+        if (!electricityStatus) {
             newErrors.electricityStatus = true;
             formIsValid = false;
         }
-        if (!ctx.waterSupply) {
+        if (!waterSupply) {
             newErrors.waterSupply = true;
             formIsValid = false;
         }
-        if (!ctx.furnishing) {
+        if (!furnishing) {
             newErrors.furnishing = true;
             formIsValid = false;
         }
-        if (!ctx.tiles) {
+        if (!tiles) {
             newErrors.tiles = true;
             formIsValid = false;
         }
-        if (!ctx.gatedSecurity) {
+        if (!gatedSecurity) {
             newErrors.gatedSecurity = true;
             formIsValid = false;
         }
@@ -69,73 +87,23 @@ const Features = () => {
     const handleSubmit = () => {
         if (handleValidation()) {
             setAuth(true);
-            // Proceed with form submission logic
+            ctx.setNonVegAllowed(nonVegAllowed);
+            ctx.setPetsAllowed(petsAllowed);
+            ctx.setElectricityStatus(electricityStatus);
+            ctx.setWaterSupply(waterSupply);
+            ctx.setFurnishing(furnishing);
+            ctx.setTiles(tiles);
+            ctx.setGatedSecurity(gatedSecurity);
+            navigate('/list-your-property/pricing-details');
         } else {
-            return
+            return;
         }
-        navigate('/list-your-property/pricing-details');
     };
-
-    const nonVegAllowedHandler = (e) => {
-        ctx.setNonVegAllowed(e.target.value);
-    };
-
-    useEffect(() => {
-        ctx.setNonVegAllowed(ctx.nonVegAllowed);
-    }, [ctx.nonVegAllowed]);
-
-    const petsAllowedHandler = (e) => {
-        ctx.setPetsAllowed(e.target.value);
-    };
-
-    useEffect(() => {
-        ctx.setPetsAllowed(ctx.petsAllowed);
-    }, [ctx.petsAllowed]);
-
-    const electricityStatusHandler = (e) => {
-        ctx.setElectricityStatus(e.target.value);
-    };
-
-    useEffect(() => {
-        ctx.setElectricityStatus(ctx.electricityStatus);
-    }, [ctx.electricityStatus]);
-
-    const waterSupplyHandler = (e) => {
-        ctx.setWaterSupply(e.target.value);
-    };
-
-    useEffect(() => {
-        ctx.setWaterSupply(ctx.waterSupply);
-    }, [ctx.waterSupply]);
-
-    const furnishingHandler = (e) => {
-        ctx.setFurnishing(e.target.value);
-    };
-
-    useEffect(() => {
-        ctx.setFurnishing(ctx.furnishing);
-    }, [ctx.furnishing]);
-
-    const tilesHandler = (e) => {
-        ctx.setTiles(e.target.value);
-    };
-
-    useEffect(() => {
-        ctx.setTiles(ctx.tiles);
-    }, [ctx.tiles]);
-
-    const safetyhandler = (e) => {
-        ctx.setGatedSecurity(e.target.value);
-    };
-
-    useEffect(() => {
-        ctx.setGatedSecurity(ctx.gatedSecurity);
-    }, [ctx.gatedSecurity]);
 
     return (
         <Fragment>
             <SellersFlow currPage={currPage} handleSubmit={handleSubmit}>
-                <div onSubmit={handleSubmit}>
+                <div>
                     <div className='headline'>
                         <p>General Features</p>
                     </div>
@@ -146,11 +114,11 @@ const Features = () => {
                     </div>
                     <div className="radio-group">
                         <div className="radio-option">
-                            <input type="radio" id="nonVegAllowed" name="nonVegAllowed" value="Allowed" onChange={nonVegAllowedHandler} />
+                            <input type="radio" id="nonVegAllowed" name="nonVegAllowed" value="Allowed" checked={nonVegAllowed === "Allowed"} onChange={(e) => setNonVegAllowed(e.target.value)} />
                             <label htmlFor="nonVegAllowed">Allowed</label>
                         </div>
                         <div className="radio-option">
-                            <input type="radio" id="nonVegNotAllowed" name="nonVegAllowed" value="Not-Allowed" onChange={nonVegAllowedHandler} />
+                            <input type="radio" id="nonVegNotAllowed" name="nonVegAllowed" value="Not-Allowed" checked={nonVegAllowed === "Not-Allowed"} onChange={(e) => setNonVegAllowed(e.target.value)} />
                             <label htmlFor="nonVegNotAllowed">Not Allowed</label>
                         </div>
                     </div>
@@ -162,11 +130,11 @@ const Features = () => {
                     </div>
                     <div className="radio-group">
                         <div className="radio-option">
-                            <input type="radio" id="petsAllowed" name="petsAllowed" value="Yes" onChange={petsAllowedHandler} />
+                            <input type="radio" id="petsAllowed" name="petsAllowed" value="Yes" checked={petsAllowed === "Yes"} onChange={(e) => setPetsAllowed(e.target.value)} />
                             <label htmlFor="petsAllowed">Yes</label>
                         </div>
                         <div className="radio-option">
-                            <input type="radio" id="petsNotAllowed" name="petsAllowed" value="No" onChange={petsAllowedHandler} />
+                            <input type="radio" id="petsNotAllowed" name="petsAllowed" value="No" checked={petsAllowed === "No"} onChange={(e) => setPetsAllowed(e.target.value)} />
                             <label htmlFor="petsNotAllowed">No</label>
                         </div>
                     </div>
@@ -178,11 +146,11 @@ const Features = () => {
                     </div>
                     <div className="radio-group">
                         <div className="radio-option">
-                            <input type="radio" id="noCut" name="electricityStatus" value="Rare/No Powercut" onChange={electricityStatusHandler} />
+                            <input type="radio" id="noCut" name="electricityStatus" value="Rare/No Powercut" checked={electricityStatus === "Rare/No Powercut"} onChange={(e) => setElectricityStatus(e.target.value)} />
                             <label htmlFor="noCut">Rare/No Powercut</label>
                         </div>
                         <div className="radio-option">
-                            <input type="radio" id="cut" name="electricityStatus" value="Frequent Powercut" onChange={electricityStatusHandler} />
+                            <input type="radio" id="cut" name="electricityStatus" value="Frequent Powercut" checked={electricityStatus === "Frequent Powercut"} onChange={(e) => setElectricityStatus(e.target.value)} />
                             <label htmlFor="cut">Frequent Powercut</label>
                         </div>
                     </div>
@@ -194,15 +162,15 @@ const Features = () => {
                     </div>
                     <div className="radio-group">
                         <div className="radio-option">
-                            <input type="radio" id="municipal" name="waterSupply" value="Municipal Corporation (BMC)" onChange={waterSupplyHandler} />
+                            <input type="radio" id="municipal" name="waterSupply" value="Municipal Corporation (BMC)" checked={waterSupply === "Municipal Corporation (BMC)"} onChange={(e) => setWaterSupply(e.target.value)} />
                             <label htmlFor="municipal">Municipal Corporation (BMC)</label>
                         </div>
                         <div className="radio-option">
-                            <input type="radio" id="borewell" name="waterSupply" value="Borewell" onChange={waterSupplyHandler} />
+                            <input type="radio" id="borewell" name="waterSupply" value="Borewell" checked={waterSupply === "Borewell"} onChange={(e) => setWaterSupply(e.target.value)} />
                             <label htmlFor="borewell">Borewell</label>
                         </div>
                         <div className="radio-option">
-                            <input type="radio" id="both" name="waterSupply" value="Both" onChange={waterSupplyHandler} />
+                            <input type="radio" id="both" name="waterSupply" value="Both" checked={waterSupply === "Both"} onChange={(e) => setWaterSupply(e.target.value)} />
                             <label htmlFor="both">Both</label>
                         </div>
                     </div>
@@ -216,15 +184,15 @@ const Features = () => {
                     </div>
                     <div className="radio-group">
                         <div className="radio-option" style={{ width: "33%" }}>
-                            <input type="checkbox" id="full" name="furnishing" value="Fully Furnished (BMC)" onChange={furnishingHandler} />
+                            <input type="checkbox" id="full" name="furnishing" value="Fully Furnished (BMC)" checked={furnishing === "Fully Furnished (BMC)"} onChange={(e) => setFurnishing(e.target.value)} />
                             <label htmlFor="full">Fully Furnished (BMC)</label>
                         </div>
                         <div className="radio-option">
-                            <input type="checkbox" id="semi" name="furnishing" value="Semi Furnished" onChange={furnishingHandler} />
+                            <input type="checkbox" id="semi" name="furnishing" value="Semi Furnished" checked={furnishing === "Semi Furnished"} onChange={(e) => setFurnishing(e.target.value)} />
                             <label htmlFor="semi">Semi Furnished</label>
                         </div>
                         <div className="radio-option">
-                            <input type="checkbox" id="unfurnished" name="furnishing" value="Unfurnished" onChange={furnishingHandler} />
+                            <input type="checkbox" id="unfurnished" name="furnishing" value="Unfurnished" checked={furnishing === "Unfurnished"} onChange={(e) => setFurnishing(e.target.value)} />
                             <label htmlFor="unfurnished">Unfurnished</label>
                         </div>
                     </div>
@@ -237,15 +205,15 @@ const Features = () => {
                     </div>
                     <div className="radio-group">
                         <div className="radio-option" style={{ width: "33%" }}>
-                            <input type="checkbox" id="white" name="tiles" value="Normal White Tiles" onChange={tilesHandler} />
+                            <input type="checkbox" id="white" name="tiles" value="Normal White Tiles" checked={tiles === "Normal White Tiles"} onChange={(e) => setTiles(e.target.value)} />
                             <label htmlFor="white">Normal White Tiles</label>
                         </div>
                         <div className="radio-option">
-                            <input type="checkbox" id="marble" name="tiles" value="Marble" onChange={tilesHandler} />
+                            <input type="checkbox" id="marble" name="tiles" value="Marble" checked={tiles === "Marble"} onChange={(e) => setTiles(e.target.value)} />
                             <label htmlFor="marble">Marble</label>
                         </div>
                         <div className="radio-option">
-                            <input type="checkbox" id="vitrified" name="tiles" value="Vitrified Tiles" onChange={tilesHandler} />
+                            <input type="checkbox" id="vitrified" name="tiles" value="Vitrified Tiles" checked={tiles === "Vitrified Tiles"} onChange={(e) => setTiles(e.target.value)} />
                             <label htmlFor="vitrified">Vitrified Tiles</label>
                         </div>
                     </div>
@@ -259,11 +227,11 @@ const Features = () => {
                     </div>
                     <div className="radio-group">
                         <div className="radio-option">
-                            <input type="checkbox" id="personnel" name="security" value="yes" onChange={safetyhandler} />
+                            <input type="checkbox" id="personnel" name="security" value="yes" checked={gatedSecurity === "yes"} onChange={(e) => setGatedSecurity(e.target.value)} />
                             <label htmlFor="Rent">24/7 Security personnel (Gated Security)</label>
                         </div>
                         <div className="radio-option">
-                            <input type="checkbox" id="cctv" name="security" value="no" onChange={safetyhandler} />
+                            <input type="checkbox" id="cctv" name="security" value="no" checked={gatedSecurity === "no"} onChange={(e) => setGatedSecurity(e.target.value)} />
                             <label htmlFor="Sale">Security Systems- CCTV</label>
                         </div>
                     </div>

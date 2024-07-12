@@ -1,7 +1,7 @@
 import './LocationDetails.css';
 import imp from "../../assets/imp.png";
 import SellersFlow from '../SellersFlow/SellersFlow';
-import { Fragment, useState } from 'react';
+import { Fragment, useEffect, useState } from 'react';
 import Map from '../UI/Map';
 import AppContext from '../../store/use-context';
 import { useContext } from 'react';
@@ -12,21 +12,24 @@ const currPage = '2';
 const LocationDetails = () => {
     const ctx = useContext(AppContext);
     const navigate = useNavigate();
-    const [buildingName, setBuildingName] = useState('');
-    const [locality, setLocality] = useState('');
-    const [landmark, setLandmark] = useState('');
-    const [city, setCity] = useState('');
     const [errors, setErrors] = useState({});
+
+    useEffect(() => {
+        ctx.setBuildingName(ctx.buildingName);
+        ctx.setLocality(ctx.locality);
+        ctx.setLandmark(ctx.landmark);
+        ctx.setCity(ctx.city);
+    },[ctx]);
 
     const validateForm = () => {
         let errors = {};
-        if (!buildingName.trim()) {
+        if (!ctx.buildingName.trim()) {
             errors.buildingName = 'Building/ Society Name is required.';
         }
-        if (!locality.trim()) {
+        if (!ctx.locality.trim()) {
             errors.locality = 'Locality/ Area is required.';
         }
-        if (!city.trim()) {
+        if (!ctx.city.trim()) {
             errors.city = 'City is required.';
         }
         return errors;
@@ -55,8 +58,8 @@ const LocationDetails = () => {
                             type="text"
                             placeholder="Enter Apartment Name"
                             className="text-box"
-                            value={buildingName}
-                            onChange={(e) => setBuildingName(e.target.value)}
+                            value={ctx.buildingName}
+                            onChange={(e) => ctx.setBuildingName(e.target.value)}
                         />
                         {errors.buildingName && <p className="error">{errors.buildingName}</p>}
                     </div>
@@ -68,8 +71,8 @@ const LocationDetails = () => {
                             type="text"
                             placeholder="Eg : sheetal nagar"
                             className="text-box"
-                            value={locality}
-                            onChange={(e) => setLocality(e.target.value)}
+                            value={ctx.locality}
+                            onChange={(e) => ctx.setLocality(e.target.value)}
                         />
                         {errors.locality && <p className="error">{errors.locality}</p>}
                     </div>
@@ -84,8 +87,8 @@ const LocationDetails = () => {
                             type="text"
                             placeholder="Prominent Landmark"
                             className="text-box"
-                            value={landmark}
-                            onChange={(e) => setLandmark(e.target.value)}
+                            value={ctx.landmark}
+                            onChange={(e) => ctx.setLandmark(e.target.value)}
                         />
                     </div>
                     <div className="square-area">
@@ -96,8 +99,8 @@ const LocationDetails = () => {
                             type="text"
                             placeholder="Mumbai, Maharashtra"
                             className="text-box"
-                            value={city}
-                            onChange={(e) => setCity(e.target.value)}
+                            value={ctx.city}
+                            onChange={(e) => ctx.setCity(e.target.value)}
                         />
                         {errors.city && <p className="error">{errors.city}</p>}
                     </div>

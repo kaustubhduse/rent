@@ -1,44 +1,55 @@
 import "./PriceDetails.css";
-import { Fragment, useState } from "react";
+import { Fragment, useState, useEffect, useContext } from "react";
 import SellersFlow from "../SellersFlow/SellersFlow";
 import imp from "../../assets/imp.png";
 import { useNavigate } from "react-router-dom";
+import AppContext from "../../store/use-context";
 
 const PriceDetails = () => {
   const navigate = useNavigate();
   const currPage = "4";
-  const [rent, setRent] = useState("");
-  const [security, setSecurity] = useState("");
-  const [isMaintainence, setIsMaintainence] = useState("");
-  const [extraMaintainence, setExtraMaintainence] = useState("");
+  const ctx = useContext(AppContext);
+
   const [errors, setErrors] = useState({});
 
+  useEffect(() => {
+    // No need to update context state here, values are directly from context
+    ctx.setRent(ctx.rent);
+    ctx.setSecurity(ctx.security);
+    ctx.setIsMaintainence(ctx.isMaintainence);
+    ctx.setExtraMaintainence(ctx.extraMaintainence);
+    
+  }, [ctx]);
+
   const handleRentChange = (event) => {
-    setRent(event.target.value);
+    ctx.setRent(event.target.value);
   };
 
   const handleSecurityChange = (event) => {
-    setSecurity(event.target.value);
+    ctx.setSecurity(event.target.value);
   };
 
   const handleMaintainence = (event) => {
-    setIsMaintainence(event.target.value);
+    ctx.setIsMaintainence(event.target.value);
   };
 
   const handleExtraMaintainenceChange = (event) => {
-    setExtraMaintainence(event.target.value);
+    ctx.setExtraMaintainence(event.target.value);
   };
 
   const validateForm = () => {
     let errors = {};
-    if (!rent.trim()) {
+    if (!ctx.rent.trim()) {
       errors.rent = "Rent amount is required.";
     }
-    if (!security.trim()) {
+    if (!ctx.security.trim()) {
       errors.security = "Security amount is required.";
     }
-    if (!isMaintainence.trim()) {
-      errors.Maintainence = "Maintainence is required.";
+    if (!ctx.isMaintainence.trim()) {
+      errors.isMaintainence = "Maintenance type is required.";
+    }
+    if (ctx.isMaintainence === "extra" && !ctx.extraMaintainence.trim()) {
+      errors.extraMaintainence = "Extra maintenance amount is required.";
     }
     return errors;
   };
@@ -66,7 +77,7 @@ const PriceDetails = () => {
               type="text"
               placeholder="₹"
               className="text-box"
-              value={rent}
+              value={ctx.rent}
               onChange={handleRentChange}
             />
             {errors.rent && <p className="error">{errors.rent}</p>}
@@ -79,7 +90,7 @@ const PriceDetails = () => {
               type="text"
               placeholder="₹"
               className="text-box"
-              value={security}
+              value={ctx.security}
               onChange={handleSecurityChange}
             />
             {errors.security && <p className="error">{errors.security}</p>}
@@ -89,47 +100,37 @@ const PriceDetails = () => {
         <div className="square">
           <div className="square-area">
             <p>
-              Maintainence <img src={imp} alt="important" className="imp" />
+              Maintenance <img src={imp} alt="important" className="imp" />
             </p>
             <select
               className="text-box"
-              value={isMaintainence}
+              value={ctx.isMaintainence}
               onChange={handleMaintainence}
             >
-              <option value="" disabled className="disabled-option">Maintainence</option>
+              <option value="" disabled className="disabled-option">Maintenance</option>
               <option value="rent">Included in rent</option>
-              <option value="extra">Extra maintainence</option>
+              <option value="extra">Extra maintenance</option>
             </select>
-            {errors.Maintainence && <p className="error">{errors.Maintainence}</p>}
+            {errors.isMaintainence && <p className="error">{errors.isMaintainence}</p>}
           </div>
-          <div className="square-area">
-            <p style={{ marginLeft: "8rem" }}>
-              Maintainence <img src={imp} alt="important" className="imp" />
-            </p>
-            <input
-              type="text"
-              placeholder="₹   Maintainence"
-              className="text-box"
-              style={{ width: "53%", marginLeft: "8rem" }}
-              onChange={handleExtraMaintainenceChange}
-            />
-             {errors.extraMaintainence && <p className="error">{errors.extraMaintainence}</p>}
-          </div>
-          <div className="square-area">
-            <input
-              type="text"
-              placeholder="Monthly"
-              className="text-box"
-              style={{
-                width: "53%",
-                marginTop: "1.5rem",
-                marginLeft: "2.5rem",
-              }}
-            />
-          </div>
+          {ctx.isMaintainence === "extra" && (
+            <div className="square-area">
+              <p>
+                Extra Maintenance <img src={imp} alt="important" className="imp" />
+              </p>
+              <input
+                type="text"
+                placeholder="₹ Extra Maintenance"
+                className="text-box"
+                value={ctx.extraMaintainence}
+                onChange={handleExtraMaintainenceChange}
+              />
+              {errors.extraMaintainence && <p className="error">{errors.extraMaintainence}</p>}
+            </div>
+          )}
         </div>
 
-        {isMaintainence === "extra" && (
+        {ctx.isMaintainence === "extra" && (
           <div className="square-area">
             <p>Additional Pricing details to convey to agent?</p>
             <input

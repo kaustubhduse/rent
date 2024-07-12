@@ -21,10 +21,20 @@ export const AppContextProvider = (props) => {
     const [nonVegAllowed, setNonVegAllowed] = useState('');
     const [electricityStatus, setElectricityStatus] = useState('');
     const [propertyAge, setPropertyAge] = useState('');
+    const [propertyFor, setPropertyFor] = useState('');
     const [propertyType, setPropertyType] = useState('');
     const [gatedSecurity, setGatedSecurity] = useState('');
     const [amenities, setAmenities] = useState([]);
     const [description,setDescription] = useState('');
+    const [rent, setRent] = useState('');
+    const [security, setSecurity] = useState('');
+    const [isMaintainence, setIsMaintainence] = useState('');
+    const [extraMaintainence, setExtraMaintainence] = useState('');
+    const [buildingName, setBuildingName] = useState('');
+    const [locality, setLocality] = useState('');
+    const[landmark,setLandmark] = useState('');
+    const [city,setCity] = useState('');
+    const [propertyImages, setPropertyImages] = useState([]);    
 
     const contextValue = {
         bedrooms,setBedrooms,
@@ -44,10 +54,20 @@ export const AppContextProvider = (props) => {
         nonVegAllowed,setNonVegAllowed,
         electricityStatus,setElectricityStatus,
         propertyAge,setPropertyAge,
+        propertyFor,setPropertyFor,
         propertyType,setPropertyType,
         gatedSecurity,setGatedSecurity,
         amenities,setAmenities,
-        description,setDescription
+        description,setDescription,
+        rent, setRent,
+        security, setSecurity,
+        isMaintainence, setIsMaintainence,
+        extraMaintainence, setExtraMaintainence,
+        buildingName, setBuildingName,
+        locality, setLocality,
+        landmark,setLandmark,
+        city,setCity,
+        propertyImages, setPropertyImages,
     };
 
     return (

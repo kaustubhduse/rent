@@ -1,9 +1,11 @@
 import './PropertyImages.css';
-import { Fragment, useRef } from 'react';
+import { Fragment, useRef, useContext } from 'react';
 import SellersFlow from '../SellersFlow/SellersFlow';
 import camera from '../../assets/camera.png';
+import AppContext from '../../store/use-context';
 
 const PropertyImages = () => {
+    const ctx = useContext(AppContext);
     const currPage = '5';
     const fileInputRef = useRef(null);
 
@@ -11,11 +13,24 @@ const PropertyImages = () => {
         fileInputRef.current.click();
     }
 
+    console.log(ctx.propertyImages);
+
     const handleFileChange = (event) => {
-        const files = event.target.files;
-        // Handle file upload logic here
-        console.log(files);
-    }
+        const files = Array.from(event.target.files);
+        const imagesArray = [];
+    
+        files.forEach((file) => {
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                const imageData = e.target.result;
+                imagesArray.push(imageData);
+                ctx.setPropertyImages(imagesArray); // Update context with the selected image data
+            };
+            reader.readAsDataURL(file);
+        });
+    };
+    
+    
 
     return (
         <Fragment>

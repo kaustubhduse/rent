@@ -94,6 +94,48 @@ margin-top: 7rem;
    margin-bottom: 5rem;
    width: 80%;
   }
+
+  .location{
+    margin-bottom: 4rem;
+  }
+
+  .location-title{
+    font-family: Merriweather Sans;
+font-size: 26px;
+font-weight: 400;
+line-height: 32.68px;
+text-align: left;
+color: rgba(0, 0, 0, 1);
+
+  }
+
+  .locality{
+    font-family: Inter;
+font-size: 16px;
+font-weight: 400;
+line-height: 19.36px;
+text-align: left;
+
+  }
+
+  .image-section{
+    width: 837px;
+    height: 405px;
+    top: 146px;
+    left: 60px;
+    gap: 0px;
+    border: 1px;
+    border: 1px solid rgba(214, 214, 214, 1)
+  }
+
+  .property-image{
+    width: 837px;
+    height: 405px;
+    top: 146px;
+    left: 60px;
+    gap: 0px;
+    border: 1px;
+  }
   
   @media (max-width: 768px) {
     .property-item {
