@@ -21,8 +21,6 @@ import propertytype from '../../assets/overview/propertytype.png';
 import gatedsecurity from '../../assets/overview/gated-security.png';
 
 import Amenities from './Amenities';
-import ImageSection from './ImageSection';
-
 const PreviewPage = () => {
   const ctx = useContext(AppContext);
 
@@ -57,11 +55,11 @@ const PreviewPage = () => {
         <p className='locality'>{`${ctx.buildingName} ${ctx.landmark} ${ctx.locality}`}</p>
       </div>
 
-        <ImageSection>
+        
         {ctx.propertyImages.map((img, index) => (
           <img src={img} alt='property' key={index} className='property-image' />
         ))}
-        </ImageSection>
+        
       
  
       <p className='overview'>Property Overview</p>
