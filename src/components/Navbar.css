@@ -56,10 +56,8 @@
   }
   
   .logo {
-    width: 105px;
     height: 48px;
     gap: 0px;
-    opacity: 0px;
   }
 
   @media (max-width: 1024px) {
